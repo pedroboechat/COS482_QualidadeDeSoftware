@@ -15,7 +15,7 @@ services:
     # environment:
     #   - HOST=$BACKEND_HOST
     ports:
-      - "$PORT:8080"
+      - "8080:8080"
     volumes:
       - "./jhipster:/home/jhipster/app"
     command: tail -f /dev/null
