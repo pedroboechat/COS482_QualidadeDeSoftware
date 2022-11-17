@@ -1,0 +1,33 @@
+{
+  "fields": [
+    {
+      "fieldName": "NumeroDoProcesso",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "Tribunal",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "Juiz",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "NecessitaLaudo",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [],
+  "entityType": "start-form",
+  "processBpmnId": "JudicialProcedureProcess",
+  "processEntityName": "JudicialProcedureProcess",
+  "domainEntityName": "JudicialProcedure",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "JudicialProcedureStartForm",
+  "changelogDate": "20210401000002",
+  "skipFakeData": true
+}

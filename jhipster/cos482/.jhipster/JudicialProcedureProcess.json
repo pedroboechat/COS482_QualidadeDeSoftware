@@ -1,0 +1,56 @@
+{
+  "fields": [
+    {
+      "fieldName": "NumeroDoProcesso",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "Tribunal",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "Juiz",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "NecessitaLaudo",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "Laudista",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "DataDaVisita",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "Endereco",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "LinkLaudo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "LaudoValido",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "ProtocoladoEm",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [],
+  "entityType": "process-binding",
+  "processBpmnId": "JudicialProcedureProcess",
+  "domainEntityName": "JudicialProcedure",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "JudicialProcedureProcess",
+  "changelogDate": "20220401000002",
+  "skipFakeData": true
+}
