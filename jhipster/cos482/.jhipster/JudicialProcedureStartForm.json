@@ -19,7 +19,7 @@
   ],
   "relationships": [],
   "entityType": "start-form",
-  "processBpmnId": "JudicialProcedureProcess",
+  "processBpmnId": "JudicialProcedure",
   "processEntityName": "JudicialProcedureProcess",
   "domainEntityName": "JudicialProcedure",
   "service": "serviceClass",

@@ -43,7 +43,7 @@
   ],
   "relationships": [],
   "entityType": "process-binding",
-  "processBpmnId": "JudicialProcedureProcess",
+  "processBpmnId": "JudicialProcedure",
   "domainEntityName": "JudicialProcedure",
   "service": "serviceClass",
   "dto": "mapstruct",
