@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1y6n9yo" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.4.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <bpmn:process id="JudicialProcedure" name="Judicial Procedure" isExecutable="true">
+    <bpmn:startEvent id="Event_0edxl8o">
+      <bpmn:outgoing>Flow_1nlgavf</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1nlgavf" sourceRef="Event_0edxl8o" targetRef="AssignReporter" />
+    <bpmn:sequenceFlow id="Flow_0syd43b" sourceRef="AssignReporter" targetRef="AssignReport" />
+    <bpmn:sequenceFlow id="Flow_0jix5hh" sourceRef="AssignReport" targetRef="ValidateReport" />
+    <bpmn:sequenceFlow id="Flow_1k0taqy" sourceRef="ValidateReport" targetRef="ProtocolReport" />
+    <bpmn:endEvent id="Event_0r5b4jh">
+      <bpmn:incoming>Flow_01q8veo</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_01q8veo" sourceRef="ProtocolReport" targetRef="Event_0r5b4jh" />
+    <bpmn:userTask id="AssignReporter" name="Marcar visita&#10;e definir laudista">
+      <bpmn:incoming>Flow_1nlgavf</bpmn:incoming>
+      <bpmn:outgoing>Flow_0syd43b</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="AssignReport" name="Atribuir laudo">
+      <bpmn:incoming>Flow_0syd43b</bpmn:incoming>
+      <bpmn:outgoing>Flow_0jix5hh</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="ValidateReport" name="Validar laudo">
+      <bpmn:incoming>Flow_0jix5hh</bpmn:incoming>
+      <bpmn:outgoing>Flow_1k0taqy</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="ProtocolReport" name="Marcar laudo protocolado">
+      <bpmn:incoming>Flow_1k0taqy</bpmn:incoming>
+      <bpmn:outgoing>Flow_01q8veo</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="JudicialProcedure">
+      <bpmndi:BPMNShape id="Event_0edxl8o_di" bpmnElement="Event_0edxl8o">
+        <dc:Bounds x="152" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0r5b4jh_di" bpmnElement="Event_0r5b4jh">
+        <dc:Bounds x="1282" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_13jd4xq_di" bpmnElement="AssignReporter">
+        <dc:Bounds x="520" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_11z5iu3_di" bpmnElement="AssignReport">
+        <dc:Bounds x="680" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0x2bbj7_di" bpmnElement="ValidateReport">
+        <dc:Bounds x="830" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_13jlxn7_di" bpmnElement="ProtocolReport">
+        <dc:Bounds x="1070" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1nlgavf_di" bpmnElement="Flow_1nlgavf">
+        <di:waypoint x="188" y="120" />
+        <di:waypoint x="520" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01q8veo_di" bpmnElement="Flow_01q8veo">
+        <di:waypoint x="1170" y="120" />
+        <di:waypoint x="1282" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0syd43b_di" bpmnElement="Flow_0syd43b">
+        <di:waypoint x="620" y="120" />
+        <di:waypoint x="680" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0jix5hh_di" bpmnElement="Flow_0jix5hh">
+        <di:waypoint x="780" y="120" />
+        <di:waypoint x="830" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1k0taqy_di" bpmnElement="Flow_1k0taqy">
+        <di:waypoint x="930" y="120" />
+        <di:waypoint x="1070" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
