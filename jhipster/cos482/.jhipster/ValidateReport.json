@@ -1,0 +1,22 @@
+{
+  "fields": [
+    {
+      "fieldName": "laudoValido",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [],
+  "entityType": "user-task-form",
+  "processBpmnId": "JudicialProcedure",
+  "processEntityName": "JudicialProcedureProcess",
+  "taskBpmnId": "ValidateReport",
+  "domainEntityName": "JudicialProcedure",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "ValidateReport",
+  "changelogDate": "20210401000002",
+  "skipFakeData": true
+}

@@ -1,0 +1,22 @@
+{
+  "fields": [
+    {
+      "fieldName": "protocoladoEm",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [],
+  "entityType": "user-task-form",
+  "processBpmnId": "JudicialProcedure",
+  "processEntityName": "JudicialProcedureProcess",
+  "taskBpmnId": "ProtocolReport",
+  "domainEntityName": "JudicialProcedure",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "ProtocolReport",
+  "changelogDate": "20210401000002",
+  "skipFakeData": true
+}

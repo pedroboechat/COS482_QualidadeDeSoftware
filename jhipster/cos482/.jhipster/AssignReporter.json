@@ -1,0 +1,30 @@
+{
+  "fields": [
+    {
+      "fieldName": "laudista",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataDaVisita",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endereco",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityType": "user-task-form",
+  "processBpmnId": "JudicialProcedure",
+  "processEntityName": "JudicialProcedureProcess",
+  "domainEntityName": "JudicialProcedure",
+  "taskBpmnId": "AssignReporter",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "AssignReporter",
+  "changelogDate": "20210401000002",
+  "skipFakeData": true
+}
