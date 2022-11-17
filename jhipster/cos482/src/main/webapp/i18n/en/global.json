@@ -12,6 +12,9 @@
         "processInstance": "Process Instances",
         "taskInstance": "All Tasks",
         "myCandidateTasks": "My Tasks",
+        "judicialProcedureStartForm": "Judicial Procedure Start Form",
+        "judicialProcedure": "Judicial Procedure",
+        "judicialProcedureProcess": "Judicial Procedure Process",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

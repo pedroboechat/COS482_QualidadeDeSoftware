@@ -1,0 +1,33 @@
+{
+  "cos482App": {
+    "judicialProcedureProcess": {
+      "home": {
+        "title": "Judicial Procedure Processes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Judicial Procedure Process",
+        "createOrEditLabel": "Create or edit a Judicial Procedure Process",
+        "notFound": "No Judicial Procedure Processes found"
+      },
+      "created": "A new Judicial Procedure Process is created with identifier {{ param }}",
+      "updated": "A Judicial Procedure Process is updated with identifier {{ param }}",
+      "deleted": "A Judicial Procedure Process is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Judicial Procedure Process {{ id }}?"
+      },
+      "detail": {
+        "title": "Judicial Procedure Process"
+      },
+      "id": "ID",
+      "NumeroDoProcesso": "Numero Do Processo",
+      "Tribunal": "Tribunal",
+      "Juiz": "Juiz",
+      "NecessitaLaudo": "Necessita Laudo",
+      "Laudista": "Laudista",
+      "DataDaVisita": "Data Da Visita",
+      "Endereco": "Endereco",
+      "LinkLaudo": "Link Laudo",
+      "LaudoValido": "Laudo Valido",
+      "ProtocoladoEm": "Protocolado Em"
+    }
+  }
+}

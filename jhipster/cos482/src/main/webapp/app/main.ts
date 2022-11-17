@@ -31,6 +31,8 @@ import TranslationService from '@/locale/translation.service';
 import UserOAuth2Service from '@/entities/user/user.oauth2.service';
 /* tslint:disable */
 
+import JudicialProcedureService from '@/entities/judicial-procedure/judicial-procedure.service';
+import JudicialProcedureProcessService from '@/entities/judicial-procedure-process/judicial-procedure-process.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 /* tslint:enable */
@@ -94,6 +96,8 @@ new Vue({
 
     userOAuth2Service: () => new UserOAuth2Service(),
     translationService: () => translationService,
+    judicialProcedureService: () => new JudicialProcedureService(),
+    judicialProcedureProcessService: () => new JudicialProcedureProcessService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService,
   },

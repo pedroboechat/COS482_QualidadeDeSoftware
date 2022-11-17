@@ -1,0 +1,25 @@
+{
+  "cos482App": {
+    "judicialProcedure": {
+      "home": {
+        "title": "Judicial Procedures",
+        "refreshListLabel": "Refresh list",
+        "notFound": "No Judicial Procedures found"
+      },
+      "detail": {
+        "title": "Judicial Procedure"
+      },
+      "id": "ID",
+      "NumeroDoProcesso": "Numero Do Processo",
+      "Tribunal": "Tribunal",
+      "Juiz": "Juiz",
+      "NecessitaLaudo": "Necessita Laudo",
+      "Laudista": "Laudista",
+      "DataDaVisita": "Data Da Visita",
+      "Endereco": "Endereco",
+      "LinkLaudo": "Link Laudo",
+      "LaudoValido": "Laudo Valido",
+      "ProtocoladoEm": "Protocolado Em"
+    }
+  }
+}

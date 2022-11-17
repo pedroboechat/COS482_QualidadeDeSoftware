@@ -1,0 +1,27 @@
+{
+  "cos482App": {
+    "judicialProcedureStartForm": {
+      "home": {
+        "title": "Judicial Procedure Start Forms",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Judicial Procedure Start Form",
+        "createOrEditLabel": "Create or edit a Judicial Procedure Start Form",
+        "notFound": "No Judicial Procedure Start Forms found"
+      },
+      "created": "A new Judicial Procedure Start Form is created with identifier {{ param }}",
+      "updated": "A Judicial Procedure Start Form is updated with identifier {{ param }}",
+      "deleted": "A Judicial Procedure Start Form is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Judicial Procedure Start Form {{ id }}?"
+      },
+      "detail": {
+        "title": "Judicial Procedure Start Form"
+      },
+      "id": "ID",
+      "NumeroDoProcesso": "Numero Do Processo",
+      "Tribunal": "Tribunal",
+      "Juiz": "Juiz",
+      "NecessitaLaudo": "Necessita Laudo"
+    }
+  }
+}

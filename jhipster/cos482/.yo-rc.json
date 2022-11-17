@@ -52,6 +52,7 @@
     "jwtSecretKey": "NzUwNWVmNDVjOTY3MzRlNTcxMGQzZmQ5N2FjM2EwMjU4OTZjM2IzMzM2YzcyZmMyMGIyMDNjMjBhN2ZiNTc3MmNjYzFmYWVlYjA5MmFiYjIxNGUxOTBiMWI2NDBhMzJlNWZhMmNiODkwNTY3NjQ4YTVhNzU1MGMzMTE0NWFlOTQ=",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["en", "pt-br"]
+    "languages": ["en", "pt-br"],
+    "entities": ["JudicialProcedure"]
   }
 }
