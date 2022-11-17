@@ -1,0 +1,24 @@
+{
+  "cos482App": {
+    "protocolReport": {
+      "home": {
+        "title": "Protocol Reports",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Protocol Report",
+        "createOrEditLabel": "Criar ou editar Protocol Report",
+        "notFound": "Nenhum Protocol Report encontrado"
+      },
+      "created": "Um novo Protocol Report foi criado com o identificador {{ param }}",
+      "updated": "Um Protocol Report foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Protocol Report foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Protocol Report {{ id }}?"
+      },
+      "detail": {
+        "title": "Protocol Report"
+      },
+      "id": "ID",
+      "protocoladoEm": "Protocolado Em"
+    }
+  }
+}

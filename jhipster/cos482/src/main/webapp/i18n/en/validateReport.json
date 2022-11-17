@@ -1,0 +1,24 @@
+{
+  "cos482App": {
+    "validateReport": {
+      "home": {
+        "title": "Validate Reports",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Validate Report",
+        "createOrEditLabel": "Create or edit a Validate Report",
+        "notFound": "No Validate Reports found"
+      },
+      "created": "A new Validate Report is created with identifier {{ param }}",
+      "updated": "A Validate Report is updated with identifier {{ param }}",
+      "deleted": "A Validate Report is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Validate Report {{ id }}?"
+      },
+      "detail": {
+        "title": "Validate Report"
+      },
+      "id": "ID",
+      "laudoValido": "Laudo Valido"
+    }
+  }
+}

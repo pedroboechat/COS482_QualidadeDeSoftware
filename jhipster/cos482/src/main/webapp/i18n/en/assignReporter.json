@@ -1,0 +1,26 @@
+{
+  "cos482App": {
+    "assignReporter": {
+      "home": {
+        "title": "Assign Reporters",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Assign Reporter",
+        "createOrEditLabel": "Create or edit a Assign Reporter",
+        "notFound": "No Assign Reporters found"
+      },
+      "created": "A new Assign Reporter is created with identifier {{ param }}",
+      "updated": "A Assign Reporter is updated with identifier {{ param }}",
+      "deleted": "A Assign Reporter is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Assign Reporter {{ id }}?"
+      },
+      "detail": {
+        "title": "Assign Reporter"
+      },
+      "id": "ID",
+      "laudista": "Laudista",
+      "dataDaVisita": "Data Da Visita",
+      "endereco": "Endereco"
+    }
+  }
+}

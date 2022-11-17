@@ -1,0 +1,24 @@
+{
+  "cos482App": {
+    "assignReport": {
+      "home": {
+        "title": "Assign Reports",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Assign Report",
+        "createOrEditLabel": "Criar ou editar Assign Report",
+        "notFound": "Nenhum Assign Report encontrado"
+      },
+      "created": "Um novo Assign Report foi criado com o identificador {{ param }}",
+      "updated": "Um Assign Report foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Assign Report foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Assign Report {{ id }}?"
+      },
+      "detail": {
+        "title": "Assign Report"
+      },
+      "id": "ID",
+      "linkLaudo": "Link Laudo"
+    }
+  }
+}

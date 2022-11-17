@@ -1,0 +1,24 @@
+{
+  "cos482App": {
+    "validateReport": {
+      "home": {
+        "title": "Validate Reports",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Validate Report",
+        "createOrEditLabel": "Criar ou editar Validate Report",
+        "notFound": "Nenhum Validate Report encontrado"
+      },
+      "created": "Um novo Validate Report foi criado com o identificador {{ param }}",
+      "updated": "Um Validate Report foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Validate Report foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Validate Report {{ id }}?"
+      },
+      "detail": {
+        "title": "Validate Report"
+      },
+      "id": "ID",
+      "laudoValido": "Laudo Valido"
+    }
+  }
+}

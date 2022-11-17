@@ -1,0 +1,24 @@
+{
+  "cos482App": {
+    "protocolReport": {
+      "home": {
+        "title": "Protocol Reports",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Protocol Report",
+        "createOrEditLabel": "Create or edit a Protocol Report",
+        "notFound": "No Protocol Reports found"
+      },
+      "created": "A new Protocol Report is created with identifier {{ param }}",
+      "updated": "A Protocol Report is updated with identifier {{ param }}",
+      "deleted": "A Protocol Report is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Protocol Report {{ id }}?"
+      },
+      "detail": {
+        "title": "Protocol Report"
+      },
+      "id": "ID",
+      "protocoladoEm": "Protocolado Em"
+    }
+  }
+}

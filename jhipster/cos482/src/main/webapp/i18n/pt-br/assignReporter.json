@@ -1,0 +1,26 @@
+{
+  "cos482App": {
+    "assignReporter": {
+      "home": {
+        "title": "Assign Reporters",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Assign Reporter",
+        "createOrEditLabel": "Criar ou editar Assign Reporter",
+        "notFound": "Nenhum Assign Reporter encontrado"
+      },
+      "created": "Um novo Assign Reporter foi criado com o identificador {{ param }}",
+      "updated": "Um Assign Reporter foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Assign Reporter foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Assign Reporter {{ id }}?"
+      },
+      "detail": {
+        "title": "Assign Reporter"
+      },
+      "id": "ID",
+      "laudista": "Laudista",
+      "dataDaVisita": "Data Da Visita",
+      "endereco": "Endereco"
+    }
+  }
+}

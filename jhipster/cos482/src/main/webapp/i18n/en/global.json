@@ -15,6 +15,10 @@
         "judicialProcedureStartForm": "Judicial Procedure Start Form",
         "judicialProcedure": "Judicial Procedure",
         "judicialProcedureProcess": "Judicial Procedure Process",
+        "validateReport": "Validate Report",
+        "assignReport": "Assign Report",
+        "assignReporter": "Assign Reporter",
+        "protocolReport": "Protocol Report",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
