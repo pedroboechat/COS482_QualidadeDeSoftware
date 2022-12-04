@@ -28,6 +28,12 @@ const JudicialProcedureProcess_AssignReporterExecute = () => import('@/entities/
 const JudicialProcedureProcess_ProtocolReportDetails = () => import('@/entities/judicial-procedure-process/protocol-report/protocol-report-details.vue');
 // prettier-ignore
 const JudicialProcedureProcess_ProtocolReportExecute = () => import('@/entities/judicial-procedure-process/protocol-report/protocol-report-execute.vue');
+// prettier-ignore
+const Judge = () => import('@/entities/judge/judge.vue');
+// prettier-ignore
+const JudgeUpdate = () => import('@/entities/judge/judge-update.vue');
+// prettier-ignore
+const JudgeDetails = () => import('@/entities/judge/judge-details.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 export default [
@@ -125,6 +131,30 @@ export default [
     path: '/process-definition/JudicialProcedure/task/ProtocolReport/:taskInstanceId/execute',
     name: 'JudicialProcedureProcess_ProtocolReportExecute',
     component: JudicialProcedureProcess_ProtocolReportExecute,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/judge',
+    name: 'Judge',
+    component: Judge,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/judge/new',
+    name: 'JudgeCreate',
+    component: JudgeUpdate,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/judge/:judgeId/edit',
+    name: 'JudgeEdit',
+    component: JudgeUpdate,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/judge/:judgeId/view',
+    name: 'JudgeView',
+    component: JudgeDetails,
     meta: { authorities: [Authority.USER] },
   },
   // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here

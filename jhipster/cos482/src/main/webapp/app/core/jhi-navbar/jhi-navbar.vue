@@ -37,6 +37,10 @@
             <font-awesome-icon icon="asterisk" />
             <span v-text="$t('global.menu.entities.judicialProcedure')">Judicial Procedure</span>
           </b-dropdown-item>
+          <b-dropdown-item to="/judge">
+            <font-awesome-icon icon="asterisk" />
+            <span v-text="$t('global.menu.entities.judge')">Judge</span>
+          </b-dropdown-item>
           <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
         </b-nav-item-dropdown>
         <b-nav-item-dropdown
