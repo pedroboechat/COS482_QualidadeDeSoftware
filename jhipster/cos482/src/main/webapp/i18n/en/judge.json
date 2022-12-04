@@ -1,0 +1,26 @@
+{
+  "cos482App": {
+    "judge": {
+      "home": {
+        "title": "Judges",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Judge",
+        "createOrEditLabel": "Create or edit a Judge",
+        "notFound": "No Judges found"
+      },
+      "created": "A new Judge is created with identifier {{ param }}",
+      "updated": "A Judge is updated with identifier {{ param }}",
+      "deleted": "A Judge is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Judge {{ id }}?"
+      },
+      "detail": {
+        "title": "Judge"
+      },
+      "id": "ID",
+      "name": "Name",
+      "cpf": "Cpf",
+      "oab": "Oab"
+    }
+  }
+}

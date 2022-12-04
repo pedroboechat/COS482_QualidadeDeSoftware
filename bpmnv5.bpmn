@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1y6n9yo" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.4.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <bpmn:process id="JudicialProcedure" name="Judicial Procedure" isExecutable="true">
+    <bpmn:startEvent id="Event_0edxl8o">
+      <bpmn:outgoing>Flow_064wy90</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0syd43b" sourceRef="AssignReporter" targetRef="AssignReport" />
+    <bpmn:sequenceFlow id="Flow_0jix5hh" sourceRef="AssignReport" targetRef="ValidateReport" />
+    <bpmn:endEvent id="Event_0r5b4jh">
+      <bpmn:incoming>Flow_01q8veo</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_01q8veo" sourceRef="ProtocolReport" targetRef="Event_0r5b4jh" />
+    <bpmn:userTask id="AssignReporter" name="Marcar visita&#10;e definir laudista">
+      <bpmn:incoming>Flow_064wy90</bpmn:incoming>
+      <bpmn:outgoing>Flow_0syd43b</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="AssignReport" name="Atribuir laudo">
+      <bpmn:incoming>Flow_0syd43b</bpmn:incoming>
+      <bpmn:incoming>LaudoInvalido</bpmn:incoming>
+      <bpmn:outgoing>Flow_0jix5hh</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="ValidateReport" name="Validar laudo">
+      <bpmn:incoming>Flow_0jix5hh</bpmn:incoming>
+      <bpmn:outgoing>Flow_017vcis</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="ProtocolReport" name="Marcar laudo protocolado">
+      <bpmn:incoming>LaudoValido</bpmn:incoming>
+      <bpmn:outgoing>Flow_01q8veo</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_1fpljfq">
+      <bpmn:incoming>Flow_017vcis</bpmn:incoming>
+      <bpmn:outgoing>LaudoInvalido</bpmn:outgoing>
+      <bpmn:outgoing>LaudoValido</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="LaudoInvalido" name="Laudo Inválido" sourceRef="Gateway_1fpljfq" targetRef="AssignReport">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${! (processInstance.judicialProcedure.laudoValido)}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_017vcis" sourceRef="ValidateReport" targetRef="Gateway_1fpljfq" />
+    <bpmn:sequenceFlow id="LaudoValido" name="Luado Válido" sourceRef="Gateway_1fpljfq" targetRef="ProtocolReport">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${processInstance.judicialProcedure.laudoValido}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_064wy90" sourceRef="Event_0edxl8o" targetRef="AssignReporter" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="JudicialProcedure">
+      <bpmndi:BPMNShape id="Event_0edxl8o_di" bpmnElement="Event_0edxl8o">
+        <dc:Bounds x="152" y="222" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0r5b4jh_di" bpmnElement="Event_0r5b4jh">
+        <dc:Bounds x="1282" y="222" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_13jd4xq_di" bpmnElement="AssignReporter">
+        <dc:Bounds x="410" y="200" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_11z5iu3_di" bpmnElement="AssignReport">
+        <dc:Bounds x="570" y="200" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0x2bbj7_di" bpmnElement="ValidateReport">
+        <dc:Bounds x="720" y="200" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_13jlxn7_di" bpmnElement="ProtocolReport">
+        <dc:Bounds x="1110" y="200" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1fpljfq_di" bpmnElement="Gateway_1fpljfq" isMarkerVisible="true">
+        <dc:Bounds x="865" y="215" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0syd43b_di" bpmnElement="Flow_0syd43b">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="570" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0jix5hh_di" bpmnElement="Flow_0jix5hh">
+        <di:waypoint x="670" y="240" />
+        <di:waypoint x="720" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01q8veo_di" bpmnElement="Flow_01q8veo">
+        <di:waypoint x="1210" y="240" />
+        <di:waypoint x="1282" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0eidudw_di" bpmnElement="LaudoInvalido">
+        <di:waypoint x="890" y="215" />
+        <di:waypoint x="890" y="100" />
+        <di:waypoint x="620" y="100" />
+        <di:waypoint x="620" y="200" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="720" y="82" width="72" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_017vcis_di" bpmnElement="Flow_017vcis">
+        <di:waypoint x="820" y="240" />
+        <di:waypoint x="865" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10950pm_di" bpmnElement="LaudoValido">
+        <di:waypoint x="915" y="240" />
+        <di:waypoint x="1110" y="240" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="982" y="222" width="65" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_064wy90_di" bpmnElement="Flow_064wy90">
+        <di:waypoint x="188" y="240" />
+        <di:waypoint x="410" y="240" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
