@@ -17,82 +17,91 @@
                 <div class="form-group">
                   <label
                     class="form-control-label"
-                    v-text="$t('cos482App.judicialProcedureStartForm.NumeroDoProcesso')"
-                    for="judicial-procedure-start-form-NumeroDoProcesso"
+                    v-text="$t('cos482App.judicialProcedureStartForm.numeroDoProcesso')"
+                    for="judicial-procedure-start-form-numeroDoProcesso"
                     >Numero Do Processo</label
                   >
                   <input
                     type="text"
                     class="form-control"
-                    name="NumeroDoProcesso"
-                    id="judicial-procedure-start-form-NumeroDoProcesso"
-                    data-cy="NumeroDoProcesso"
+                    name="numeroDoProcesso"
+                    id="judicial-procedure-start-form-numeroDoProcesso"
+                    data-cy="numeroDoProcesso"
                     :class="{
-                      valid: !$v.judicialProcedureProcess.judicialProcedure.NumeroDoProcesso.$invalid,
-                      invalid: $v.judicialProcedureProcess.judicialProcedure.NumeroDoProcesso.$invalid,
+                      valid: !$v.judicialProcedureProcess.judicialProcedure.numeroDoProcesso.$invalid,
+                      invalid: $v.judicialProcedureProcess.judicialProcedure.numeroDoProcesso.$invalid,
                     }"
-                    v-model="$v.judicialProcedureProcess.judicialProcedure.NumeroDoProcesso.$model"
+                    v-model="$v.judicialProcedureProcess.judicialProcedure.numeroDoProcesso.$model"
                   />
                 </div>
                 <div class="form-group">
                   <label
                     class="form-control-label"
-                    v-text="$t('cos482App.judicialProcedureStartForm.Tribunal')"
-                    for="judicial-procedure-start-form-Tribunal"
+                    v-text="$t('cos482App.judicialProcedureStartForm.tribunal')"
+                    for="judicial-procedure-start-form-tribunal"
                     >Tribunal</label
                   >
                   <input
                     type="text"
                     class="form-control"
-                    name="Tribunal"
-                    id="judicial-procedure-start-form-Tribunal"
-                    data-cy="Tribunal"
+                    name="tribunal"
+                    id="judicial-procedure-start-form-tribunal"
+                    data-cy="tribunal"
                     :class="{
-                      valid: !$v.judicialProcedureProcess.judicialProcedure.Tribunal.$invalid,
-                      invalid: $v.judicialProcedureProcess.judicialProcedure.Tribunal.$invalid,
+                      valid: !$v.judicialProcedureProcess.judicialProcedure.tribunal.$invalid,
+                      invalid: $v.judicialProcedureProcess.judicialProcedure.tribunal.$invalid,
                     }"
-                    v-model="$v.judicialProcedureProcess.judicialProcedure.Tribunal.$model"
+                    v-model="$v.judicialProcedureProcess.judicialProcedure.tribunal.$model"
                   />
                 </div>
                 <div class="form-group">
                   <label
                     class="form-control-label"
-                    v-text="$t('cos482App.judicialProcedureStartForm.Juiz')"
-                    for="judicial-procedure-start-form-Juiz"
-                    >Juiz</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="Juiz"
-                    id="judicial-procedure-start-form-Juiz"
-                    data-cy="Juiz"
-                    :class="{
-                      valid: !$v.judicialProcedureProcess.judicialProcedure.Juiz.$invalid,
-                      invalid: $v.judicialProcedureProcess.judicialProcedure.Juiz.$invalid,
-                    }"
-                    v-model="$v.judicialProcedureProcess.judicialProcedure.Juiz.$model"
-                  />
-                </div>
-                <div class="form-group">
-                  <label
-                    class="form-control-label"
-                    v-text="$t('cos482App.judicialProcedureStartForm.NecessitaLaudo')"
-                    for="judicial-procedure-start-form-NecessitaLaudo"
+                    v-text="$t('cos482App.judicialProcedureStartForm.necessitaLaudo')"
+                    for="judicial-procedure-start-form-necessitaLaudo"
                     >Necessita Laudo</label
                   >
                   <input
                     type="checkbox"
                     class="form-check"
-                    name="NecessitaLaudo"
-                    id="judicial-procedure-start-form-NecessitaLaudo"
-                    data-cy="NecessitaLaudo"
+                    name="necessitaLaudo"
+                    id="judicial-procedure-start-form-necessitaLaudo"
+                    data-cy="necessitaLaudo"
                     :class="{
-                      valid: !$v.judicialProcedureProcess.judicialProcedure.NecessitaLaudo.$invalid,
-                      invalid: $v.judicialProcedureProcess.judicialProcedure.NecessitaLaudo.$invalid,
+                      valid: !$v.judicialProcedureProcess.judicialProcedure.necessitaLaudo.$invalid,
+                      invalid: $v.judicialProcedureProcess.judicialProcedure.necessitaLaudo.$invalid,
                     }"
-                    v-model="$v.judicialProcedureProcess.judicialProcedure.NecessitaLaudo.$model"
+                    v-model="$v.judicialProcedureProcess.judicialProcedure.necessitaLaudo.$model"
                   />
+                </div>
+                <div class="form-group">
+                  <label
+                    class="form-control-label"
+                    v-text="$t('cos482App.judicialProcedureStartForm.judge')"
+                    for="judicial-procedure-start-form-judge"
+                    >Judge</label
+                  >
+                  <select
+                    class="form-control"
+                    id="judicial-procedure-start-form-judge"
+                    data-cy="judge"
+                    name="judge"
+                    v-model="judicialProcedureProcess.judicialProcedure.judge"
+                  >
+                    <option v-bind:value="null"></option>
+                    <option
+                      v-bind:value="
+                        judicialProcedureProcess.judicialProcedure.judge &&
+                        judgeOption.id === judicialProcedureProcess.judicialProcedure.judge.id
+                          ? judicialProcedureProcess.judicialProcedure.judge
+                          : judgeOption
+                      "
+                      v-for="judgeOption in judges"
+                      :key="judgeOption.id"
+                    >
+                      {{ judgeOption.name }}
+                    </option>
+                  </select>
                 </div>
               </div>
             </template>

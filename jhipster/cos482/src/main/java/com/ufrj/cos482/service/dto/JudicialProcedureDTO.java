@@ -11,25 +11,25 @@ public class JudicialProcedureDTO implements Serializable {
 
     private Long id;
 
-    private String NumeroDoProcesso;
+    private String numeroDoProcesso;
 
-    private String Tribunal;
+    private String tribunal;
 
-    private String Juiz;
+    private Boolean necessitaLaudo;
 
-    private Boolean NecessitaLaudo;
+    private String laudista;
 
-    private String Laudista;
+    private LocalDate dataDaVisita;
 
-    private LocalDate DataDaVisita;
+    private String endereco;
 
-    private String Endereco;
+    private String linkLaudo;
 
-    private String LinkLaudo;
+    private Boolean laudoValido;
 
-    private Boolean LaudoValido;
+    private LocalDate protocoladoEm;
 
-    private LocalDate ProtocoladoEm;
+    private JudgeDTO judge;
 
     public Long getId() {
         return id;
@@ -40,83 +40,83 @@ public class JudicialProcedureDTO implements Serializable {
     }
 
     public String getNumeroDoProcesso() {
-        return NumeroDoProcesso;
+        return numeroDoProcesso;
     }
 
-    public void setNumeroDoProcesso(String NumeroDoProcesso) {
-        this.NumeroDoProcesso = NumeroDoProcesso;
+    public void setNumeroDoProcesso(String numeroDoProcesso) {
+        this.numeroDoProcesso = numeroDoProcesso;
     }
 
     public String getTribunal() {
-        return Tribunal;
+        return tribunal;
     }
 
-    public void setTribunal(String Tribunal) {
-        this.Tribunal = Tribunal;
-    }
-
-    public String getJuiz() {
-        return Juiz;
-    }
-
-    public void setJuiz(String Juiz) {
-        this.Juiz = Juiz;
+    public void setTribunal(String tribunal) {
+        this.tribunal = tribunal;
     }
 
     public Boolean getNecessitaLaudo() {
-        return NecessitaLaudo;
+        return necessitaLaudo;
     }
 
-    public void setNecessitaLaudo(Boolean NecessitaLaudo) {
-        this.NecessitaLaudo = NecessitaLaudo;
+    public void setNecessitaLaudo(Boolean necessitaLaudo) {
+        this.necessitaLaudo = necessitaLaudo;
     }
 
     public String getLaudista() {
-        return Laudista;
+        return laudista;
     }
 
-    public void setLaudista(String Laudista) {
-        this.Laudista = Laudista;
+    public void setLaudista(String laudista) {
+        this.laudista = laudista;
     }
 
     public LocalDate getDataDaVisita() {
-        return DataDaVisita;
+        return dataDaVisita;
     }
 
-    public void setDataDaVisita(LocalDate DataDaVisita) {
-        this.DataDaVisita = DataDaVisita;
+    public void setDataDaVisita(LocalDate dataDaVisita) {
+        this.dataDaVisita = dataDaVisita;
     }
 
     public String getEndereco() {
-        return Endereco;
+        return endereco;
     }
 
-    public void setEndereco(String Endereco) {
-        this.Endereco = Endereco;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getLinkLaudo() {
-        return LinkLaudo;
+        return linkLaudo;
     }
 
-    public void setLinkLaudo(String LinkLaudo) {
-        this.LinkLaudo = LinkLaudo;
+    public void setLinkLaudo(String linkLaudo) {
+        this.linkLaudo = linkLaudo;
     }
 
     public Boolean getLaudoValido() {
-        return LaudoValido;
+        return laudoValido;
     }
 
-    public void setLaudoValido(Boolean LaudoValido) {
-        this.LaudoValido = LaudoValido;
+    public void setLaudoValido(Boolean laudoValido) {
+        this.laudoValido = laudoValido;
     }
 
     public LocalDate getProtocoladoEm() {
-        return ProtocoladoEm;
+        return protocoladoEm;
     }
 
-    public void setProtocoladoEm(LocalDate ProtocoladoEm) {
-        this.ProtocoladoEm = ProtocoladoEm;
+    public void setProtocoladoEm(LocalDate protocoladoEm) {
+        this.protocoladoEm = protocoladoEm;
+    }
+
+    public JudgeDTO getJudge() {
+        return judge;
+    }
+
+    public void setJudge(JudgeDTO judge) {
+        this.judge = judge;
     }
 
     @Override
@@ -145,16 +145,16 @@ public class JudicialProcedureDTO implements Serializable {
     public String toString() {
         return "JudicialProcedureDTO{" +
             "id=" + getId() +
-            ", NumeroDoProcesso='" + getNumeroDoProcesso() + "'" +
-            ", Tribunal='" + getTribunal() + "'" +
-            ", Juiz='" + getJuiz() + "'" +
-            ", NecessitaLaudo='" + getNecessitaLaudo() + "'" +
-            ", Laudista='" + getLaudista() + "'" +
-            ", DataDaVisita='" + getDataDaVisita() + "'" +
-            ", Endereco='" + getEndereco() + "'" +
-            ", LinkLaudo='" + getLinkLaudo() + "'" +
-            ", LaudoValido='" + getLaudoValido() + "'" +
-            ", ProtocoladoEm='" + getProtocoladoEm() + "'" +
+            ", numeroDoProcesso='" + getNumeroDoProcesso() + "'" +
+            ", tribunal='" + getTribunal() + "'" +
+            ", necessitaLaudo='" + getNecessitaLaudo() + "'" +
+            ", laudista='" + getLaudista() + "'" +
+            ", dataDaVisita='" + getDataDaVisita() + "'" +
+            ", endereco='" + getEndereco() + "'" +
+            ", linkLaudo='" + getLinkLaudo() + "'" +
+            ", laudoValido='" + getLaudoValido() + "'" +
+            ", protocoladoEm='" + getProtocoladoEm() + "'" +
+            ", judge=" + getJudge() +
             "}";
     }
 }

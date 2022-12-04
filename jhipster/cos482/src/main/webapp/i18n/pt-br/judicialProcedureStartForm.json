@@ -18,10 +18,10 @@
         "title": "Judicial Procedure Start Form"
       },
       "id": "ID",
-      "NumeroDoProcesso": "Numero Do Processo",
-      "Tribunal": "Tribunal",
-      "Juiz": "Juiz",
-      "NecessitaLaudo": "Necessita Laudo"
+      "numeroDoProcesso": "Numero Do Processo",
+      "tribunal": "Tribunal",
+      "necessitaLaudo": "Necessita Laudo",
+      "judge": "Judge"
     }
   }
 }

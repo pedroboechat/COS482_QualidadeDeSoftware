@@ -1,32 +1,34 @@
+import { IJudge } from '@/shared/model/judge.model';
+
 export interface IJudicialProcedure {
   id?: number;
-  NumeroDoProcesso?: string | null;
-  Tribunal?: string | null;
-  Juiz?: string | null;
-  NecessitaLaudo?: boolean | null;
-  Laudista?: string | null;
-  DataDaVisita?: Date | null;
-  Endereco?: string | null;
-  LinkLaudo?: string | null;
-  LaudoValido?: boolean | null;
-  ProtocoladoEm?: Date | null;
+  numeroDoProcesso?: string | null;
+  tribunal?: string | null;
+  necessitaLaudo?: boolean | null;
+  laudista?: string | null;
+  dataDaVisita?: Date | null;
+  endereco?: string | null;
+  linkLaudo?: string | null;
+  laudoValido?: boolean | null;
+  protocoladoEm?: Date | null;
+  judge?: IJudge | null;
 }
 
 export class JudicialProcedure implements IJudicialProcedure {
   constructor(
     public id?: number,
-    public NumeroDoProcesso?: string | null,
-    public Tribunal?: string | null,
-    public Juiz?: string | null,
-    public NecessitaLaudo?: boolean | null,
-    public Laudista?: string | null,
-    public DataDaVisita?: Date | null,
-    public Endereco?: string | null,
-    public LinkLaudo?: string | null,
-    public LaudoValido?: boolean | null,
-    public ProtocoladoEm?: Date | null
+    public numeroDoProcesso?: string | null,
+    public tribunal?: string | null,
+    public necessitaLaudo?: boolean | null,
+    public laudista?: string | null,
+    public dataDaVisita?: Date | null,
+    public endereco?: string | null,
+    public linkLaudo?: string | null,
+    public laudoValido?: boolean | null,
+    public protocoladoEm?: Date | null,
+    public judge?: IJudge | null
   ) {
-    this.NecessitaLaudo = this.NecessitaLaudo ?? false;
-    this.LaudoValido = this.LaudoValido ?? false;
+    this.necessitaLaudo = this.necessitaLaudo ?? false;
+    this.laudoValido = this.laudoValido ?? false;
   }
 }

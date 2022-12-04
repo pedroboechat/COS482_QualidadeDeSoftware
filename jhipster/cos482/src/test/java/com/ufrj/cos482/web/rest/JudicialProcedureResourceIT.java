@@ -39,9 +39,6 @@ class JudicialProcedureResourceIT {
     private static final String DEFAULT_TRIBUNAL = "AAAAAAAAAA";
     private static final String UPDATED_TRIBUNAL = "BBBBBBBBBB";
 
-    private static final String DEFAULT_JUIZ = "AAAAAAAAAA";
-    private static final String UPDATED_JUIZ = "BBBBBBBBBB";
-
     private static final Boolean DEFAULT_NECESSITA_LAUDO = false;
     private static final Boolean UPDATED_NECESSITA_LAUDO = true;
 
@@ -91,16 +88,15 @@ class JudicialProcedureResourceIT {
      */
     public static JudicialProcedure createEntity(EntityManager em) {
         JudicialProcedure judicialProcedure = new JudicialProcedure()
-            .NumeroDoProcesso(DEFAULT_NUMERO_DO_PROCESSO)
-            .Tribunal(DEFAULT_TRIBUNAL)
-            .Juiz(DEFAULT_JUIZ)
-            .NecessitaLaudo(DEFAULT_NECESSITA_LAUDO)
-            .Laudista(DEFAULT_LAUDISTA)
-            .DataDaVisita(DEFAULT_DATA_DA_VISITA)
-            .Endereco(DEFAULT_ENDERECO)
-            .LinkLaudo(DEFAULT_LINK_LAUDO)
-            .LaudoValido(DEFAULT_LAUDO_VALIDO)
-            .ProtocoladoEm(DEFAULT_PROTOCOLADO_EM);
+            .numeroDoProcesso(DEFAULT_NUMERO_DO_PROCESSO)
+            .tribunal(DEFAULT_TRIBUNAL)
+            .necessitaLaudo(DEFAULT_NECESSITA_LAUDO)
+            .laudista(DEFAULT_LAUDISTA)
+            .dataDaVisita(DEFAULT_DATA_DA_VISITA)
+            .endereco(DEFAULT_ENDERECO)
+            .linkLaudo(DEFAULT_LINK_LAUDO)
+            .laudoValido(DEFAULT_LAUDO_VALIDO)
+            .protocoladoEm(DEFAULT_PROTOCOLADO_EM);
         return judicialProcedure;
     }
 
@@ -112,16 +108,15 @@ class JudicialProcedureResourceIT {
      */
     public static JudicialProcedure createUpdatedEntity(EntityManager em) {
         JudicialProcedure judicialProcedure = new JudicialProcedure()
-            .NumeroDoProcesso(UPDATED_NUMERO_DO_PROCESSO)
-            .Tribunal(UPDATED_TRIBUNAL)
-            .Juiz(UPDATED_JUIZ)
-            .NecessitaLaudo(UPDATED_NECESSITA_LAUDO)
-            .Laudista(UPDATED_LAUDISTA)
-            .DataDaVisita(UPDATED_DATA_DA_VISITA)
-            .Endereco(UPDATED_ENDERECO)
-            .LinkLaudo(UPDATED_LINK_LAUDO)
-            .LaudoValido(UPDATED_LAUDO_VALIDO)
-            .ProtocoladoEm(UPDATED_PROTOCOLADO_EM);
+            .numeroDoProcesso(UPDATED_NUMERO_DO_PROCESSO)
+            .tribunal(UPDATED_TRIBUNAL)
+            .necessitaLaudo(UPDATED_NECESSITA_LAUDO)
+            .laudista(UPDATED_LAUDISTA)
+            .dataDaVisita(UPDATED_DATA_DA_VISITA)
+            .endereco(UPDATED_ENDERECO)
+            .linkLaudo(UPDATED_LINK_LAUDO)
+            .laudoValido(UPDATED_LAUDO_VALIDO)
+            .protocoladoEm(UPDATED_PROTOCOLADO_EM);
         return judicialProcedure;
     }
 
@@ -142,16 +137,15 @@ class JudicialProcedureResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(judicialProcedure.getId().intValue())))
-            .andExpect(jsonPath("$.[*].NumeroDoProcesso").value(hasItem(DEFAULT_NUMERO_DO_PROCESSO)))
-            .andExpect(jsonPath("$.[*].Tribunal").value(hasItem(DEFAULT_TRIBUNAL)))
-            .andExpect(jsonPath("$.[*].Juiz").value(hasItem(DEFAULT_JUIZ)))
-            .andExpect(jsonPath("$.[*].NecessitaLaudo").value(hasItem(DEFAULT_NECESSITA_LAUDO.booleanValue())))
-            .andExpect(jsonPath("$.[*].Laudista").value(hasItem(DEFAULT_LAUDISTA)))
-            .andExpect(jsonPath("$.[*].DataDaVisita").value(hasItem(DEFAULT_DATA_DA_VISITA.toString())))
-            .andExpect(jsonPath("$.[*].Endereco").value(hasItem(DEFAULT_ENDERECO)))
-            .andExpect(jsonPath("$.[*].LinkLaudo").value(hasItem(DEFAULT_LINK_LAUDO)))
-            .andExpect(jsonPath("$.[*].LaudoValido").value(hasItem(DEFAULT_LAUDO_VALIDO.booleanValue())))
-            .andExpect(jsonPath("$.[*].ProtocoladoEm").value(hasItem(DEFAULT_PROTOCOLADO_EM.toString())));
+            .andExpect(jsonPath("$.[*].numeroDoProcesso").value(hasItem(DEFAULT_NUMERO_DO_PROCESSO)))
+            .andExpect(jsonPath("$.[*].tribunal").value(hasItem(DEFAULT_TRIBUNAL)))
+            .andExpect(jsonPath("$.[*].necessitaLaudo").value(hasItem(DEFAULT_NECESSITA_LAUDO.booleanValue())))
+            .andExpect(jsonPath("$.[*].laudista").value(hasItem(DEFAULT_LAUDISTA)))
+            .andExpect(jsonPath("$.[*].dataDaVisita").value(hasItem(DEFAULT_DATA_DA_VISITA.toString())))
+            .andExpect(jsonPath("$.[*].endereco").value(hasItem(DEFAULT_ENDERECO)))
+            .andExpect(jsonPath("$.[*].linkLaudo").value(hasItem(DEFAULT_LINK_LAUDO)))
+            .andExpect(jsonPath("$.[*].laudoValido").value(hasItem(DEFAULT_LAUDO_VALIDO.booleanValue())))
+            .andExpect(jsonPath("$.[*].protocoladoEm").value(hasItem(DEFAULT_PROTOCOLADO_EM.toString())));
     }
 
     @Test
@@ -166,16 +160,15 @@ class JudicialProcedureResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(judicialProcedure.getId().intValue()))
-            .andExpect(jsonPath("$.NumeroDoProcesso").value(DEFAULT_NUMERO_DO_PROCESSO))
-            .andExpect(jsonPath("$.Tribunal").value(DEFAULT_TRIBUNAL))
-            .andExpect(jsonPath("$.Juiz").value(DEFAULT_JUIZ))
-            .andExpect(jsonPath("$.NecessitaLaudo").value(DEFAULT_NECESSITA_LAUDO.booleanValue()))
-            .andExpect(jsonPath("$.Laudista").value(DEFAULT_LAUDISTA))
-            .andExpect(jsonPath("$.DataDaVisita").value(DEFAULT_DATA_DA_VISITA.toString()))
-            .andExpect(jsonPath("$.Endereco").value(DEFAULT_ENDERECO))
-            .andExpect(jsonPath("$.LinkLaudo").value(DEFAULT_LINK_LAUDO))
-            .andExpect(jsonPath("$.LaudoValido").value(DEFAULT_LAUDO_VALIDO.booleanValue()))
-            .andExpect(jsonPath("$.ProtocoladoEm").value(DEFAULT_PROTOCOLADO_EM.toString()));
+            .andExpect(jsonPath("$.numeroDoProcesso").value(DEFAULT_NUMERO_DO_PROCESSO))
+            .andExpect(jsonPath("$.tribunal").value(DEFAULT_TRIBUNAL))
+            .andExpect(jsonPath("$.necessitaLaudo").value(DEFAULT_NECESSITA_LAUDO.booleanValue()))
+            .andExpect(jsonPath("$.laudista").value(DEFAULT_LAUDISTA))
+            .andExpect(jsonPath("$.dataDaVisita").value(DEFAULT_DATA_DA_VISITA.toString()))
+            .andExpect(jsonPath("$.endereco").value(DEFAULT_ENDERECO))
+            .andExpect(jsonPath("$.linkLaudo").value(DEFAULT_LINK_LAUDO))
+            .andExpect(jsonPath("$.laudoValido").value(DEFAULT_LAUDO_VALIDO.booleanValue()))
+            .andExpect(jsonPath("$.protocoladoEm").value(DEFAULT_PROTOCOLADO_EM.toString()));
     }
 
     @Test

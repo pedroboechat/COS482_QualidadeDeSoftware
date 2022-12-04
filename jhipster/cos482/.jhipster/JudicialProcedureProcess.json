@@ -1,47 +1,50 @@
 {
   "fields": [
     {
-      "fieldName": "NumeroDoProcesso",
+      "fieldName": "numeroDoProcesso",
       "fieldType": "String"
     },
     {
-      "fieldName": "Tribunal",
+      "fieldName": "tribunal",
       "fieldType": "String"
     },
     {
-      "fieldName": "Juiz",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "NecessitaLaudo",
+      "fieldName": "necessitaLaudo",
       "fieldType": "Boolean"
     },
     {
-      "fieldName": "Laudista",
+      "fieldName": "laudista",
       "fieldType": "String"
     },
     {
-      "fieldName": "DataDaVisita",
+      "fieldName": "dataDaVisita",
       "fieldType": "LocalDate"
     },
     {
-      "fieldName": "Endereco",
+      "fieldName": "endereco",
       "fieldType": "String"
     },
     {
-      "fieldName": "LinkLaudo",
+      "fieldName": "linkLaudo",
       "fieldType": "String"
     },
     {
-      "fieldName": "LaudoValido",
+      "fieldName": "laudoValido",
       "fieldType": "Boolean"
     },
     {
-      "fieldName": "ProtocoladoEm",
+      "fieldName": "protocoladoEm",
       "fieldType": "LocalDate"
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "relationshipName": "judge",
+      "otherEntityName": "judge",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "name"
+    }
+  ],
   "entityType": "process-binding",
   "processBpmnId": "JudicialProcedure",
   "domainEntityName": "JudicialProcedure",

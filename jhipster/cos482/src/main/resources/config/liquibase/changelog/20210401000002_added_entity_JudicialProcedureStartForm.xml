@@ -20,10 +20,10 @@
             <column name="tribunal" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="juiz" type="varchar(255)">
+            <column name="necessita_laudo" type="boolean">
                 <constraints nullable="true" />
             </column>
-            <column name="necessita_laudo" type="boolean">
+            <column name="judge_id" type="bigint">
                 <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->

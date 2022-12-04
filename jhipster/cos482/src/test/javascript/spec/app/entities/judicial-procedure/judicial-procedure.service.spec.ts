@@ -33,27 +33,15 @@ describe('Service Tests', () => {
     beforeEach(() => {
       service = new JudicialProcedureService();
       currentDate = new Date();
-      elemDefault = new JudicialProcedure(
-        0,
-        'AAAAAAA',
-        'AAAAAAA',
-        'AAAAAAA',
-        false,
-        'AAAAAAA',
-        currentDate,
-        'AAAAAAA',
-        'AAAAAAA',
-        false,
-        currentDate
-      );
+      elemDefault = new JudicialProcedure(0, 'AAAAAAA', 'AAAAAAA', false, 'AAAAAAA', currentDate, 'AAAAAAA', 'AAAAAAA', false, currentDate);
     });
 
     describe('Service methods', () => {
       it('should find an element', async () => {
         const returnedFromService = Object.assign(
           {
-            DataDaVisita: dayjs(currentDate).format(DATE_FORMAT),
-            ProtocoladoEm: dayjs(currentDate).format(DATE_FORMAT),
+            dataDaVisita: dayjs(currentDate).format(DATE_FORMAT),
+            protocoladoEm: dayjs(currentDate).format(DATE_FORMAT),
           },
           elemDefault
         );
@@ -77,23 +65,22 @@ describe('Service Tests', () => {
       it('should return a list of JudicialProcedure', async () => {
         const returnedFromService = Object.assign(
           {
-            NumeroDoProcesso: 'BBBBBB',
-            Tribunal: 'BBBBBB',
-            Juiz: 'BBBBBB',
-            NecessitaLaudo: true,
-            Laudista: 'BBBBBB',
-            DataDaVisita: dayjs(currentDate).format(DATE_FORMAT),
-            Endereco: 'BBBBBB',
-            LinkLaudo: 'BBBBBB',
-            LaudoValido: true,
-            ProtocoladoEm: dayjs(currentDate).format(DATE_FORMAT),
+            numeroDoProcesso: 'BBBBBB',
+            tribunal: 'BBBBBB',
+            necessitaLaudo: true,
+            laudista: 'BBBBBB',
+            dataDaVisita: dayjs(currentDate).format(DATE_FORMAT),
+            endereco: 'BBBBBB',
+            linkLaudo: 'BBBBBB',
+            laudoValido: true,
+            protocoladoEm: dayjs(currentDate).format(DATE_FORMAT),
           },
           elemDefault
         );
         const expected = Object.assign(
           {
-            DataDaVisita: currentDate,
-            ProtocoladoEm: currentDate,
+            dataDaVisita: currentDate,
+            protocoladoEm: currentDate,
           },
           returnedFromService
         );

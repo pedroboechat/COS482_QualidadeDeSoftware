@@ -19,143 +19,159 @@
               </h5>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.NumeroDoProcesso')"
-                    >NumeroDoProcesso</label
+                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.numeroDoProcesso')"
+                    >numeroDoProcesso</label
                   >
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="NumeroDoProcesso"
-                    id="judicial-procedure-NumeroDoProcesso"
-                    data-cy="NumeroDoProcesso"
-                    v-model="judicialProcedureProcess.judicialProcedure.NumeroDoProcesso"
+                    name="numeroDoProcesso"
+                    id="judicial-procedure-numeroDoProcesso"
+                    data-cy="numeroDoProcesso"
+                    v-model="judicialProcedureProcess.judicialProcedure.numeroDoProcesso"
                   />
                 </div>
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.Tribunal')">Tribunal</label>
+                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.tribunal')">tribunal</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="Tribunal"
-                    id="judicial-procedure-Tribunal"
-                    data-cy="Tribunal"
-                    v-model="judicialProcedureProcess.judicialProcedure.Tribunal"
+                    name="tribunal"
+                    id="judicial-procedure-tribunal"
+                    data-cy="tribunal"
+                    v-model="judicialProcedureProcess.judicialProcedure.tribunal"
                   />
                 </div>
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.Juiz')">Juiz</label>
+                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.necessitaLaudo')">necessitaLaudo</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="Juiz"
-                    id="judicial-procedure-Juiz"
-                    data-cy="Juiz"
-                    v-model="judicialProcedureProcess.judicialProcedure.Juiz"
+                    name="necessitaLaudo"
+                    id="judicial-procedure-necessitaLaudo"
+                    data-cy="necessitaLaudo"
+                    v-model="judicialProcedureProcess.judicialProcedure.necessitaLaudo"
                   />
                 </div>
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.NecessitaLaudo')">NecessitaLaudo</label>
+                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.laudista')">laudista</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="NecessitaLaudo"
-                    id="judicial-procedure-NecessitaLaudo"
-                    data-cy="NecessitaLaudo"
-                    v-model="judicialProcedureProcess.judicialProcedure.NecessitaLaudo"
+                    name="laudista"
+                    id="judicial-procedure-laudista"
+                    data-cy="laudista"
+                    v-model="judicialProcedureProcess.judicialProcedure.laudista"
                   />
                 </div>
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.Laudista')">Laudista</label>
+                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.dataDaVisita')">dataDaVisita</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="Laudista"
-                    id="judicial-procedure-Laudista"
-                    data-cy="Laudista"
-                    v-model="judicialProcedureProcess.judicialProcedure.Laudista"
+                    name="dataDaVisita"
+                    id="judicial-procedure-dataDaVisita"
+                    data-cy="dataDaVisita"
+                    v-model="judicialProcedureProcess.judicialProcedure.dataDaVisita"
                   />
                 </div>
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.DataDaVisita')">DataDaVisita</label>
+                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.endereco')">endereco</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="DataDaVisita"
-                    id="judicial-procedure-DataDaVisita"
-                    data-cy="DataDaVisita"
-                    v-model="judicialProcedureProcess.judicialProcedure.DataDaVisita"
+                    name="endereco"
+                    id="judicial-procedure-endereco"
+                    data-cy="endereco"
+                    v-model="judicialProcedureProcess.judicialProcedure.endereco"
                   />
                 </div>
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.Endereco')">Endereco</label>
+                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.linkLaudo')">linkLaudo</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="Endereco"
-                    id="judicial-procedure-Endereco"
-                    data-cy="Endereco"
-                    v-model="judicialProcedureProcess.judicialProcedure.Endereco"
+                    name="linkLaudo"
+                    id="judicial-procedure-linkLaudo"
+                    data-cy="linkLaudo"
+                    v-model="judicialProcedureProcess.judicialProcedure.linkLaudo"
                   />
                 </div>
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.LinkLaudo')">LinkLaudo</label>
+                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.laudoValido')">laudoValido</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="LinkLaudo"
-                    id="judicial-procedure-LinkLaudo"
-                    data-cy="LinkLaudo"
-                    v-model="judicialProcedureProcess.judicialProcedure.LinkLaudo"
+                    name="laudoValido"
+                    id="judicial-procedure-laudoValido"
+                    data-cy="laudoValido"
+                    v-model="judicialProcedureProcess.judicialProcedure.laudoValido"
                   />
                 </div>
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.LaudoValido')">LaudoValido</label>
+                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.protocoladoEm')">protocoladoEm</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="LaudoValido"
-                    id="judicial-procedure-LaudoValido"
-                    data-cy="LaudoValido"
-                    v-model="judicialProcedureProcess.judicialProcedure.LaudoValido"
+                    name="protocoladoEm"
+                    id="judicial-procedure-protocoladoEm"
+                    data-cy="protocoladoEm"
+                    v-model="judicialProcedureProcess.judicialProcedure.protocoladoEm"
                   />
                 </div>
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('cos482App.judicialProcedureProcess.ProtocoladoEm')">ProtocoladoEm</label>
+                  <label
+                    class="form-control-label"
+                    v-text="$t('cos482App.judicialProcedureProcess.judge')"
+                    for="judicial-procedure-process-judge"
+                    >Judge</label
+                  >
                   <input
+                    v-if="judicialProcedureProcess.judicialProcedure.judge"
                     readonly
                     type="text"
                     class="form-control"
-                    name="ProtocoladoEm"
-                    id="judicial-procedure-ProtocoladoEm"
-                    data-cy="ProtocoladoEm"
-                    v-model="judicialProcedureProcess.judicialProcedure.ProtocoladoEm"
+                    name="judge"
+                    id="judicial-procedure-judge"
+                    data-cy="judge"
+                    :value="judicialProcedureProcess.judicialProcedure.judge.name"
+                  />
+                  <input
+                    v-else
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="judge"
+                    id="judicial-procedure-judge"
+                    data-cy="judge"
+                    value=""
                   />
                 </div>
               </div>

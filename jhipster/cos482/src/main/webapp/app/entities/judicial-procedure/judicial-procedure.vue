@@ -18,16 +18,16 @@
         <thead>
           <tr>
             <th scope="row"><span v-text="$t('global.field.id')">ID</span></th>
-            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.NumeroDoProcesso')">Numero Do Processo</span></th>
-            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.Tribunal')">Tribunal</span></th>
-            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.Juiz')">Juiz</span></th>
-            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.NecessitaLaudo')">Necessita Laudo</span></th>
-            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.Laudista')">Laudista</span></th>
-            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.DataDaVisita')">Data Da Visita</span></th>
-            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.Endereco')">Endereco</span></th>
-            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.LinkLaudo')">Link Laudo</span></th>
-            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.LaudoValido')">Laudo Valido</span></th>
-            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.ProtocoladoEm')">Protocolado Em</span></th>
+            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.numeroDoProcesso')">Numero Do Processo</span></th>
+            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.tribunal')">Tribunal</span></th>
+            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.necessitaLaudo')">Necessita Laudo</span></th>
+            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.laudista')">Laudista</span></th>
+            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.dataDaVisita')">Data Da Visita</span></th>
+            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.endereco')">Endereco</span></th>
+            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.linkLaudo')">Link Laudo</span></th>
+            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.laudoValido')">Laudo Valido</span></th>
+            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.protocoladoEm')">Protocolado Em</span></th>
+            <th scope="row"><span v-text="$t('cos482App.judicialProcedure.judge')">Judge</span></th>
             <th scope="row"></th>
           </tr>
         </thead>
@@ -38,16 +38,22 @@
                 judicialProcedure.id
               }}</router-link>
             </td>
-            <td>{{ judicialProcedure.NumeroDoProcesso }}</td>
-            <td>{{ judicialProcedure.Tribunal }}</td>
-            <td>{{ judicialProcedure.Juiz }}</td>
-            <td>{{ judicialProcedure.NecessitaLaudo }}</td>
-            <td>{{ judicialProcedure.Laudista }}</td>
-            <td>{{ judicialProcedure.DataDaVisita }}</td>
-            <td>{{ judicialProcedure.Endereco }}</td>
-            <td>{{ judicialProcedure.LinkLaudo }}</td>
-            <td>{{ judicialProcedure.LaudoValido }}</td>
-            <td>{{ judicialProcedure.ProtocoladoEm }}</td>
+            <td>{{ judicialProcedure.numeroDoProcesso }}</td>
+            <td>{{ judicialProcedure.tribunal }}</td>
+            <td>{{ judicialProcedure.necessitaLaudo }}</td>
+            <td>{{ judicialProcedure.laudista }}</td>
+            <td>{{ judicialProcedure.dataDaVisita }}</td>
+            <td>{{ judicialProcedure.endereco }}</td>
+            <td>{{ judicialProcedure.linkLaudo }}</td>
+            <td>{{ judicialProcedure.laudoValido }}</td>
+            <td>{{ judicialProcedure.protocoladoEm }}</td>
+            <td>
+              <div v-if="judicialProcedure.judge">
+                <router-link :to="{ name: 'JudgeView', params: { judgeId: judicialProcedure.judge.id } }">{{
+                  judicialProcedure.judge.name
+                }}</router-link>
+              </div>
+            </td>
             <td class="text-right">
               <div class="btn-group">
                 <router-link

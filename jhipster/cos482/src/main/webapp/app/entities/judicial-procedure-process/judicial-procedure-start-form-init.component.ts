@@ -1,5 +1,8 @@
 import { Component, Vue, Inject } from 'vue-property-decorator';
 
+import JudgeService from '@/entities/judge/judge.service'; //
+import { IJudge } from '@/shared/model/judge.model';
+
 import { IJudicialProcedureProcess, JudicialProcedureProcess } from '@/shared/model/judicial-procedure-process.model';
 
 import { ProcessInstance, ProcessDefinitionService } from 'akip-vue-community';
@@ -10,10 +13,9 @@ import JudicialProcedureProcessService from './judicial-procedure-process.servic
 const validations: any = {
   judicialProcedureProcess: {
     judicialProcedure: {
-      NumeroDoProcesso: {},
-      Tribunal: {},
-      Juiz: {},
-      NecessitaLaudo: {},
+      numeroDoProcesso: {},
+      tribunal: {},
+      necessitaLaudo: {},
     },
   },
 };
@@ -28,6 +30,10 @@ export default class JudicialProcedureStartFormInitComponent extends Vue {
 
   public bpmnProcessDefinitionId: string = 'JudicialProcedure';
   public judicialProcedureProcess: IJudicialProcedureProcess = new JudicialProcedureProcess();
+
+  @Inject('judgeService') private judgeService: () => JudgeService;
+
+  public judges: IJudge[] = [];
 
   public isSaving = false;
   public currentLanguage = '';
@@ -81,5 +87,10 @@ export default class JudicialProcedureStartFormInitComponent extends Vue {
       this.judicialProcedureProcess.processInstance = new ProcessInstance();
       this.judicialProcedureProcess.processInstance.processDefinition = res;
     });
+    this.judgeService()
+      .retrieve()
+      .then(res => {
+        this.judges = res.data;
+      });
   }
 }

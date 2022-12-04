@@ -7,5 +7,8 @@ import org.mapstruct.*;
 /**
  * Mapper for the entity {@link JudicialProcedure} and its DTO {@link JudicialProcedureDTO}.
  */
-@Mapper(componentModel = "spring", uses = {})
-public interface JudicialProcedureMapper extends EntityMapper<JudicialProcedureDTO, JudicialProcedure> {}
+@Mapper(componentModel = "spring", uses = { JudgeMapper.class })
+public interface JudicialProcedureMapper extends EntityMapper<JudicialProcedureDTO, JudicialProcedure> {
+    @Mapping(target = "judge", source = "judge", qualifiedByName = "name")
+    JudicialProcedureDTO toDto(JudicialProcedure s);
+}

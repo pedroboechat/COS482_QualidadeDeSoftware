@@ -22,34 +22,34 @@ public class JudicialProcedure implements Serializable {
     private Long id;
 
     @Column(name = "numero_do_processo")
-    private String NumeroDoProcesso;
+    private String numeroDoProcesso;
 
     @Column(name = "tribunal")
-    private String Tribunal;
-
-    @Column(name = "juiz")
-    private String Juiz;
+    private String tribunal;
 
     @Column(name = "necessita_laudo")
-    private Boolean NecessitaLaudo;
+    private Boolean necessitaLaudo;
 
     @Column(name = "laudista")
-    private String Laudista;
+    private String laudista;
 
     @Column(name = "data_da_visita")
-    private LocalDate DataDaVisita;
+    private LocalDate dataDaVisita;
 
     @Column(name = "endereco")
-    private String Endereco;
+    private String endereco;
 
     @Column(name = "link_laudo")
-    private String LinkLaudo;
+    private String linkLaudo;
 
     @Column(name = "laudo_valido")
-    private Boolean LaudoValido;
+    private Boolean laudoValido;
 
     @Column(name = "protocolado_em")
-    private LocalDate ProtocoladoEm;
+    private LocalDate protocoladoEm;
+
+    @ManyToOne
+    private Judge judge;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -66,133 +66,133 @@ public class JudicialProcedure implements Serializable {
     }
 
     public String getNumeroDoProcesso() {
-        return this.NumeroDoProcesso;
+        return this.numeroDoProcesso;
     }
 
-    public JudicialProcedure NumeroDoProcesso(String NumeroDoProcesso) {
-        this.NumeroDoProcesso = NumeroDoProcesso;
+    public JudicialProcedure numeroDoProcesso(String numeroDoProcesso) {
+        this.numeroDoProcesso = numeroDoProcesso;
         return this;
     }
 
-    public void setNumeroDoProcesso(String NumeroDoProcesso) {
-        this.NumeroDoProcesso = NumeroDoProcesso;
+    public void setNumeroDoProcesso(String numeroDoProcesso) {
+        this.numeroDoProcesso = numeroDoProcesso;
     }
 
     public String getTribunal() {
-        return this.Tribunal;
+        return this.tribunal;
     }
 
-    public JudicialProcedure Tribunal(String Tribunal) {
-        this.Tribunal = Tribunal;
+    public JudicialProcedure tribunal(String tribunal) {
+        this.tribunal = tribunal;
         return this;
     }
 
-    public void setTribunal(String Tribunal) {
-        this.Tribunal = Tribunal;
-    }
-
-    public String getJuiz() {
-        return this.Juiz;
-    }
-
-    public JudicialProcedure Juiz(String Juiz) {
-        this.Juiz = Juiz;
-        return this;
-    }
-
-    public void setJuiz(String Juiz) {
-        this.Juiz = Juiz;
+    public void setTribunal(String tribunal) {
+        this.tribunal = tribunal;
     }
 
     public Boolean getNecessitaLaudo() {
-        return this.NecessitaLaudo;
+        return this.necessitaLaudo;
     }
 
-    public JudicialProcedure NecessitaLaudo(Boolean NecessitaLaudo) {
-        this.NecessitaLaudo = NecessitaLaudo;
+    public JudicialProcedure necessitaLaudo(Boolean necessitaLaudo) {
+        this.necessitaLaudo = necessitaLaudo;
         return this;
     }
 
-    public void setNecessitaLaudo(Boolean NecessitaLaudo) {
-        this.NecessitaLaudo = NecessitaLaudo;
+    public void setNecessitaLaudo(Boolean necessitaLaudo) {
+        this.necessitaLaudo = necessitaLaudo;
     }
 
     public String getLaudista() {
-        return this.Laudista;
+        return this.laudista;
     }
 
-    public JudicialProcedure Laudista(String Laudista) {
-        this.Laudista = Laudista;
+    public JudicialProcedure laudista(String laudista) {
+        this.laudista = laudista;
         return this;
     }
 
-    public void setLaudista(String Laudista) {
-        this.Laudista = Laudista;
+    public void setLaudista(String laudista) {
+        this.laudista = laudista;
     }
 
     public LocalDate getDataDaVisita() {
-        return this.DataDaVisita;
+        return this.dataDaVisita;
     }
 
-    public JudicialProcedure DataDaVisita(LocalDate DataDaVisita) {
-        this.DataDaVisita = DataDaVisita;
+    public JudicialProcedure dataDaVisita(LocalDate dataDaVisita) {
+        this.dataDaVisita = dataDaVisita;
         return this;
     }
 
-    public void setDataDaVisita(LocalDate DataDaVisita) {
-        this.DataDaVisita = DataDaVisita;
+    public void setDataDaVisita(LocalDate dataDaVisita) {
+        this.dataDaVisita = dataDaVisita;
     }
 
     public String getEndereco() {
-        return this.Endereco;
+        return this.endereco;
     }
 
-    public JudicialProcedure Endereco(String Endereco) {
-        this.Endereco = Endereco;
+    public JudicialProcedure endereco(String endereco) {
+        this.endereco = endereco;
         return this;
     }
 
-    public void setEndereco(String Endereco) {
-        this.Endereco = Endereco;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getLinkLaudo() {
-        return this.LinkLaudo;
+        return this.linkLaudo;
     }
 
-    public JudicialProcedure LinkLaudo(String LinkLaudo) {
-        this.LinkLaudo = LinkLaudo;
+    public JudicialProcedure linkLaudo(String linkLaudo) {
+        this.linkLaudo = linkLaudo;
         return this;
     }
 
-    public void setLinkLaudo(String LinkLaudo) {
-        this.LinkLaudo = LinkLaudo;
+    public void setLinkLaudo(String linkLaudo) {
+        this.linkLaudo = linkLaudo;
     }
 
     public Boolean getLaudoValido() {
-        return this.LaudoValido;
+        return this.laudoValido;
     }
 
-    public JudicialProcedure LaudoValido(Boolean LaudoValido) {
-        this.LaudoValido = LaudoValido;
+    public JudicialProcedure laudoValido(Boolean laudoValido) {
+        this.laudoValido = laudoValido;
         return this;
     }
 
-    public void setLaudoValido(Boolean LaudoValido) {
-        this.LaudoValido = LaudoValido;
+    public void setLaudoValido(Boolean laudoValido) {
+        this.laudoValido = laudoValido;
     }
 
     public LocalDate getProtocoladoEm() {
-        return this.ProtocoladoEm;
+        return this.protocoladoEm;
     }
 
-    public JudicialProcedure ProtocoladoEm(LocalDate ProtocoladoEm) {
-        this.ProtocoladoEm = ProtocoladoEm;
+    public JudicialProcedure protocoladoEm(LocalDate protocoladoEm) {
+        this.protocoladoEm = protocoladoEm;
         return this;
     }
 
-    public void setProtocoladoEm(LocalDate ProtocoladoEm) {
-        this.ProtocoladoEm = ProtocoladoEm;
+    public void setProtocoladoEm(LocalDate protocoladoEm) {
+        this.protocoladoEm = protocoladoEm;
+    }
+
+    public Judge getJudge() {
+        return this.judge;
+    }
+
+    public JudicialProcedure judge(Judge judge) {
+        this.setJudge(judge);
+        return this;
+    }
+
+    public void setJudge(Judge judge) {
+        this.judge = judge;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
@@ -219,16 +219,15 @@ public class JudicialProcedure implements Serializable {
     public String toString() {
         return "JudicialProcedure{" +
             "id=" + getId() +
-            ", NumeroDoProcesso='" + getNumeroDoProcesso() + "'" +
-            ", Tribunal='" + getTribunal() + "'" +
-            ", Juiz='" + getJuiz() + "'" +
-            ", NecessitaLaudo='" + getNecessitaLaudo() + "'" +
-            ", Laudista='" + getLaudista() + "'" +
-            ", DataDaVisita='" + getDataDaVisita() + "'" +
-            ", Endereco='" + getEndereco() + "'" +
-            ", LinkLaudo='" + getLinkLaudo() + "'" +
-            ", LaudoValido='" + getLaudoValido() + "'" +
-            ", ProtocoladoEm='" + getProtocoladoEm() + "'" +
+            ", numeroDoProcesso='" + getNumeroDoProcesso() + "'" +
+            ", tribunal='" + getTribunal() + "'" +
+            ", necessitaLaudo='" + getNecessitaLaudo() + "'" +
+            ", laudista='" + getLaudista() + "'" +
+            ", dataDaVisita='" + getDataDaVisita() + "'" +
+            ", endereco='" + getEndereco() + "'" +
+            ", linkLaudo='" + getLinkLaudo() + "'" +
+            ", laudoValido='" + getLaudoValido() + "'" +
+            ", protocoladoEm='" + getProtocoladoEm() + "'" +
             "}";
     }
 }
